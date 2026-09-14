@@ -1,1 +1,52 @@
+{
+"loai_tai_lieu": "MO_HINH_DE_DOA",
+  "boi_canh": "Doanh nghiệp vừa và nhỏ tại Việt Nam, vận hành hệ thống nội bộ trên ba máy chủ container, phục vụ khoảng 200 người dùng, không có đội an toàn thông tin riêng, ngân sách công cụ dưới 30 triệu đồng một năm. Nhóm được thuê dựng và bàn giao cấu hình an toàn cho hệ thống này, kèm bằng chứng kiểm chứng được và phân tích chi phí. Hệ thống gồm nginx làm cổng vào có TLS và mTLS cho đường quản trị, một ứng dụng web nhỏ, và PostgreSQL.",
+  "he_thong": "nginx -> web app -> PostgreSQL",
+  "tai_san_can_bao_ve": [
+    "Dữ liệu các phòng ban trong PostgreSQL - dữ liệu nội bộ phục vụ khoảng 200 người dùng của doanh nghiệp",
+"Đường quản trị /admin của nginx — kênh cấu hình/quản trị toàn hệ thống"
+  ],
+  "moi_de_doa": [
+    {
+      "id": "T1",
+      "mo_ta": "",
+      "tac_nhan": "",
+      "nang_luc": "",
+      "dong_co": "",
+      "nguyen_ly": "",
+      "ma_ATTCK": "",
+      "tac_dong_1_5": null,
+      "kha_nang_xay_ra_1_5": null,
+      "diem_uu_tien": null
+    },
+    {
+      "id": "T2",
+      "mo_ta": "",
+      "tac_nhan": "",
+      "nang_luc": "",
+      "dong_co": "",
+      "nguyen_ly": "",
+      "ma_ATTCK": "",
+      "tac_dong_1_5": null,
+      "kha_nang_xay_ra_1_5": null,
+      "diem_uu_tien": null
+    },
+    {
+      "id": "T3",
+      "mo_ta": "",
+      "tac_nhan": "",
+      "nang_luc": "",
+      "dong_co": "",
+      "nguyen_ly": "",
+      "ma_ATTCK": "",
+      "tac_dong_1_5": null,
+      "kha_nang_xay_ra_1_5": null,
+      "diem_uu_tien": null
+    }
+  ],
+  "moi_uu_tien_xu_ly": [],
+  "dieu_con_lai_neu_lop_ngoai_vo": ""
+}
+
+
 
