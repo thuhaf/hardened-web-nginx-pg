@@ -1,1 +1,26 @@
 
+{
+    "loai_tai_lieu": "MO_HINH_DE_DOA",
+    "boi_canh": "Doanh nghiệp vừa và nhỏ tại Việt Nam, vận hành hệ thống nội bộ trên ba máy chủ container, phục vụ khoảng 200 người dùng, không có đội an toàn thông tin riêng, ngân sách công cụ dưới 30 triệu đồng một năm. Nhóm được thuê dựng và bàn giao cấu hình an toàn cho hệ thống này, kèm bằng chứng kiểm chứng được và phân tích chi phí. Hệ thống gồm nginx làm cổng vào có TLS và mTLS cho đường quản trị, một ứng dụng web nhỏ, và PostgreSQL.",
+    "he_thong": "nginx -> web app -> PostgreSQL",
+    "so_do_luong_du_lieu": "Internet/LAN --> nginx (TLS 1.2/1.3 toan bo, mTLS bat buoc /admin) --> web app (khong giu quyen cao) --> PostgreSQL (Row Level Security, pgaudit)",
+    "tai_san_can_bao_ve": [
+        "Các dữ liệu quan trọng trong PostgreSQL(Thông tin xác thực, dữ liệu các phòng ban)",
+        "Đường quản trị /admin của nginx",
+        "Khóa Private Keys và Certificates phục vụ TLS/mTLS"
+    ],
+    "moi_de_doa": [
+        {
+            "id": "T3",
+            "mo_ta": "Lộ thông tin dữ liệu trên đường truyền giữa ứng dụng web và cơ sở dữ liệu, do cấu hình mặc định của PostgreSQL cho phép kết nối không mã hóa",
+            "dong_co": "Đánh cắp cũng như thu nhập các thông tin dữ liệu nhạy cảm được lưu trữ trong db",
+            "nguyen_ly": "sử dụng các công cụ bắt gói tin để đọc trực tiếp thông tin xác thực và dữ liệu chưa được mã hóa",
+            "ma_ATTCK": "T1040",
+            "tac_dong_1_5": 4,
+            "kha_nang_xay_ra_1_5": 3,
+            "diem_uu_tien": 12
+        }
+    ],
+    "moi_uu_tien_xu_ly": [],
+    "dieu_con_lai_neu_lop_ngoai_vo": ""
+}
