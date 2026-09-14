@@ -13,6 +13,7 @@
         {
             "id": "T3",
             "mo_ta": "Lộ thông tin dữ liệu trên đường truyền giữa ứng dụng web và cơ sở dữ liệu, do cấu hình mặc định của PostgreSQL cho phép kết nối không mã hóa",
+            "tac_nhan": "Tác nhân nội bộ trái phép",
             "dong_co": "Đánh cắp cũng như thu nhập các thông tin dữ liệu nhạy cảm được lưu trữ trong db",
             "nguyen_ly": "sử dụng các công cụ bắt gói tin để đọc trực tiếp thông tin xác thực và dữ liệu chưa được mã hóa",
             "ma_ATTCK": "T1040",
