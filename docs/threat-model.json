@@ -1,1 +1,51 @@
+{
+    "loai_tai_lieu": "MO_HINH_DE_DOA",
+    "boi_canh": "Doanh nghiệp vừa và nhỏ tại Việt Nam, vận hành hệ thống nội bộ trên ba máy chủ container, phục vụ khoảng 200 người dùng, không có đội an toàn thông tin riêng, ngân sách công cụ dưới 30 triệu đồng một năm. Nhóm được thuê dựng và bàn giao cấu hình an toàn cho hệ thống này, kèm bằng chứng kiểm chứng được và phân tích chi phí. Hệ thống gồm nginx làm cổng vào có TLS và mTLS cho đường quản trị, một ứng dụng web nhỏ, và PostgreSQL.",
+    "he_thong": "nginx -> web app -> PostgreSQL",
+    "tai_san_can_bao_ve": [
 
+        "Các dữ liệu quan trọng trong PostgreSQL(Thông tin xác thực, dữ liệu các phòng ban)",
+        "Đường quản trị /admin của nginx",
+        "Khóa Private Keys và Certificates phục vụ TLS/mTLS"
+    ],
+    "moi_de_doa": [
+        {
+            "id": "T1",
+            "mo_ta": "Nhân viên phòng ban A dùng tài khoản hợp lệ đọc được dữ liệu của phòng ban B do ứng dụng không chặn theo vai trò",
+            "tac_nhan": "Nhân viên nội bộ vượt quyền",
+            "nang_luc": "Có tài khoản đăng nhập hợp lệ, biết cấu trúc ứng dụng/API, có thể gửi truy vấn tới dữ liệu phòng ban khác nếu tầng ứng dụng/CSDL không chặn theo vai trò",
+            "dong_co": "Tò mò hoặc trục lợi từ dữ liệu phòng ban khác",
+            "nguyen_ly": "Đặc quyền tối thiểu (Row Level Security)",
+            "ma_ATTCK": "T1078",
+            "tac_dong_1_5": null,
+            "kha_nang_xay_ra_1_5": null,
+            "diem_uu_tien": null
+        },
+        {
+            "id": "T2",
+            "mo_ta": "Kẻ tấn công trong mạng nội bộ bắt được dữ liệu hoặc thông tin đăng nhập truyền giữa nginx, ứng dụng và PostgreSQL do kết nối chưa mã hóa",
+            "tac_nhan": "Nhân viên nội bộ hoặc thiết bị trong cùng mạng LAN đã bị chiếm quyền",
+            "nang_luc": "Có thể đặt thiết bị trong cùng phân đoạn mạng, dùng công cụ bắt gói tin để đọc traffic dạng cleartext nếu kết nối chưa được mã hóa",
+            "dong_co": "Đánh cắp thông tin đăng nhập hoặc dữ liệu nhạy cảm truyền giữa các thành phần",
+            "nguyen_ly": "Bảo vệ dữ liệu khi truyền (TLS + mTLS)",
+            "ma_ATTCK": "T1040",
+            "tac_dong_1_5": null,
+            "kha_nang_xay_ra_1_5": null,
+            "diem_uu_tien": null
+        },
+        {
+            "id": "T3",
+            "mo_ta": "Lộ thông tin dữ liệu trên đường truyền giữa ứng dụng web và cơ sở dữ liệu, do cấu hình mặc định của PostgreSQL cho phép kết nối không mã hóa",
+            "tac_nhan": "Tác nhân nội bộ trái phép (hacker , devices nội bộ bị nhiễm độc)",
+            "nang_luc": "Đánh cắp cũng như thu nhập các thông tin dữ liệu nhạy cảm được lưu trữ trong db",
+            "dong_co": "Đánh cắp cũng như thu nhập các thông tin dữ liệu nhạy cảm được lưu trữ trong db",
+            "nguyen_ly": "Sử dụng các công cụ bắt gói tin để đọc trực tiếp thông tin xác thực và dữ liệu chưa được mã hóa",
+            "ma_ATTCK": "T1040",
+            "tac_dong_1_5": 4,
+            "kha_nang_xay_ra_1_5": 3,
+            "diem_uu_tien": 12
+        }
+    ],
+    "moi_uu_tien_xu_ly": [],
+    "dieu_con_lai_neu_lop_ngoai_vo": ""
+}
