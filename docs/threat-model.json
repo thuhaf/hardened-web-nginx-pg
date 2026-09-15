@@ -8,29 +8,30 @@
   ],
   "moi_de_doa": [
     {
-      "id": "T1",
-      "mo_ta": "",
-      "tac_nhan": "",
-      "nang_luc": "",
-      "dong_co": "",
-      "nguyen_ly": "",
-      "ma_ATTCK": "",
-      "tac_dong_1_5": null,
-      "kha_nang_xay_ra_1_5": null,
-      "diem_uu_tien": null
+  "id": "T1",
+  "mo_ta": "Nhân viên phòng ban A dùng tài khoản hợp lệ đọc được dữ liệu của phòng ban B do ứng dụng không chặn theo vai trò",
+  "tac_nhan": "Nhân viên nội bộ vượt quyền",
+  "nang_luc": "Có tài khoản đăng nhập hợp lệ, biết cấu trúc ứng dụng/API, có thể gửi truy vấn tới dữ liệu phòng ban khác nếu tầng ứng dụng/CSDL không chặn theo vai trò",
+  "dong_co": "Tò mò hoặc trục lợi từ dữ liệu phòng ban khác",
+  "nguyen_ly": "Đặc quyền tối thiểu (Row Level Security)",
+  "ma_ATTCK": "T1078",
+  "tac_dong_1_5": null,
+  "kha_nang_xay_ra_1_5": null,
+  "diem_uu_tien": null
     },
-    {
-      "id": "T2",
-      "mo_ta": "",
-      "tac_nhan": "",
-      "nang_luc": "",
-      "dong_co": "",
-      "nguyen_ly": "",
-      "ma_ATTCK": "",
-      "tac_dong_1_5": null,
-      "kha_nang_xay_ra_1_5": null,
-      "diem_uu_tien": null
-    },
+  {
+  "id": "T2",
+  "mo_ta": "Kẻ tấn công trong mạng nội bộ bắt được dữ liệu hoặc thông tin đăng nhập truyền giữa nginx, ứng dụng và PostgreSQL do kết nối chưa mã hóa",
+  "tac_nhan": "Nhân viên nội bộ hoặc thiết bị trong cùng mạng LAN đã bị chiếm quyền",
+  "nang_luc": "Có thể đặt thiết bị trong cùng phân đoạn mạng, dùng công cụ bắt gói tin để đọc traffic dạng cleartext nếu kết nối chưa được mã hóa",
+  "dong_co": "Đánh cắp thông tin đăng nhập hoặc dữ liệu nhạy cảm truyền giữa các thành phần",
+  "nguyen_ly": "Bảo vệ dữ liệu khi truyền (TLS + mTLS)",
+  "ma_ATTCK": "T1040",
+  "tac_dong_1_5": null,
+  "kha_nang_xay_ra_1_5": null,
+  "diem_uu_tien": null
+  
+},
     {
       "id": "T3",
       "mo_ta": "",
