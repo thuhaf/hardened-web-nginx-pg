@@ -15,7 +15,7 @@
   "dong_co": "Tò mò hoặc trục lợi từ dữ liệu phòng ban khác",
   "nguyen_ly": "Đặc quyền tối thiểu (Row Level Security)",
   "ma_ATTCK": "T1078",
-  "tac_dong_1_5": null,
+  "tac_dong_1_5": 5,
   "kha_nang_xay_ra_1_5": null,
   "diem_uu_tien": null
     },
