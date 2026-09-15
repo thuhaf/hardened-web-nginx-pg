@@ -8,6 +8,22 @@
         "Đường quản trị /admin của nginx",
         "Khóa Private Keys và Certificates phục vụ TLS/mTLS"
     ],
+    "thang_diem_chu_giai": {
+        "tac_dong_1_5": {
+            "1": "Rất nhẹ - hầu như không ảnh hưởng đến dữ liệu hoặc vận hành",
+            "2": "Nhẹ - ảnh hưởng cục bộ, dễ khắc phục, không lộ dữ liệu nhạy cảm",
+            "3": "Trung bình - ảnh hưởng một phần dữ liệu hoặc dịch vụ, cần khắc phục trong ngày",
+            "4": "Nặng - lộ hoặc mất dữ liệu nhạy cảm ở phạm vi hẹp (một thành phần/một phòng ban)",
+            "5": "Nghiêm trọng - lộ dữ liệu nhạy cảm ở phạm vi rộng hoặc có thể dẫn tới chiếm quyền hệ thống"
+        },
+        "kha_nang_xay_ra_1_5": {
+            "1": "Hiếm - cần điều kiện đặc biệt, gần như không thể xảy ra trong bối cảnh hiện tại",
+            "2": "Thấp - cần nhiều bước chuẩn bị hoặc quyền truy cập hiếm có",
+            "3": "Trung bình - cần một điều kiện tiên quyết cụ thể (ví dụ: đã chiếm 1 thiết bị trong mạng)",
+            "4": "Cao - tác nhân đã có sẵn điều kiện cần thiết (tài khoản hợp lệ, hoặc lỗ hổng mặc định chưa vá)",
+            "5": "Rất cao - không cần điều kiện gì thêm, có thể khai thác ngay lập tức"
+        }
+    },
     "moi_de_doa": [
         {
             "id": "T1",
@@ -17,9 +33,9 @@
             "dong_co": "Tò mò hoặc trục lợi từ dữ liệu phòng ban khác",
             "nguyen_ly": "Đặc quyền tối thiểu (Row Level Security)",
             "ma_ATTCK": "T1078",
-            "tac_dong_1_5": null,
-            "kha_nang_xay_ra_1_5": null,
-            "diem_uu_tien": null
+            "tac_dong_1_5": 5,
+            "kha_nang_xay_ra_1_5": 4,
+            "diem_uu_tien": 20
         },
         {
             "id": "T2",
@@ -29,9 +45,9 @@
             "dong_co": "Đánh cắp thông tin đăng nhập hoặc dữ liệu nhạy cảm truyền giữa các thành phần",
             "nguyen_ly": "Bảo vệ dữ liệu khi truyền (TLS + mTLS)",
             "ma_ATTCK": "T1040",
-            "tac_dong_1_5": null,
-            "kha_nang_xay_ra_1_5": null,
-            "diem_uu_tien": null
+            "tac_dong_1_5": 5,
+            "kha_nang_xay_ra_1_5": 3,
+            "diem_uu_tien": 15
         },
         {
             "id": "T3",
@@ -42,10 +58,10 @@
             "nguyen_ly": "Sử dụng các công cụ bắt gói tin để đọc trực tiếp thông tin xác thực và dữ liệu chưa được mã hóa",
             "ma_ATTCK": "T1040",
             "tac_dong_1_5": 4,
-            "kha_nang_xay_ra_1_5": 3,
-            "diem_uu_tien": 12
+            "kha_nang_xay_ra_1_5": 4,
+            "diem_uu_tien": 16
         }
     ],
-    "moi_uu_tien_xu_ly": [],
+    "moi_uu_tien_xu_ly": ["T1", "T3", "T2"],
     "dieu_con_lai_neu_lop_ngoai_vo": ""
 }
