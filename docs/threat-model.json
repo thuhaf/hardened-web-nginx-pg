@@ -63,5 +63,5 @@
         }
     ],
     "moi_uu_tien_xu_ly": ["T1", "T3", "T2"],
-    "dieu_con_lai_neu_lop_ngoai_vo": ""
+    "dieu_con_lai_neu_lop_ngoai_vo": "Nếu lớp bảo vệ bên ngoài tại nginx bị vượt qua, việc truy cập vào hệ thống không đồng nghĩa với việc tác nhân có quyền đọc toàn bộ dữ liệu. PostgreSQL vẫn duy trì lớp phòng thủ độc lập bằng Row Level Security, giới hạn dữ liệu theo phạm vi phòng ban, nên tài khoản của phòng ban A vẫn không được phép đọc các hàng dữ liệu thuộc phòng ban B. Đồng thời, kết nối giữa web app và PostgreSQL được buộc sử dụng SSL, giúp tiếp tục bảo vệ dữ liệu trên đường truyền nội bộ. Vì vậy, khi lớp nginx thất bại, lớp kiểm soát ở tầng cơ sở dữ liệu vẫn hạn chế truy cập chéo phòng ban và giảm phạm vi ảnh hưởng."
 }
